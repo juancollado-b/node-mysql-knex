@@ -1,1 +1,5 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+.timestamp {
+    padding: 0.75rem 1rem;
+}

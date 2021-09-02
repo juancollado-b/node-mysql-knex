@@ -1,10 +1,8 @@
 const { Router } = require("express");
 const router = Router();
-
+const renderChat = require("../controllers/renderChat");
 module.exports = (io) => {
-    router.get("/chat", (req, res) => {
-        res.render("home");
-    });
+    router.get("/chat", renderChat);
 
     return router;
 };

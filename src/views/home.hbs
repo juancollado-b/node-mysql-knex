@@ -5,5 +5,23 @@
     <section class="column is-one-third">
 
     </section>
-    <section class="column is-three-quarters"></section>
+    <section class="column is-three-quarters">
+        {{#each messages}}
+            <div class="card mb-4">
+                <header class="card-header is-flex is-align-items-center">
+                    <p class="card-header-title">
+                        {{this.email}}
+                    </p>
+                    <p class="timestamp"><time
+                            datetime={{this.created_at}}
+                        >{{this.created_at}}</time></p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <p>{{this.message}}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </section>
 </main>
