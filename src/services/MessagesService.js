@@ -11,7 +11,7 @@ module.exports = class MessagesService {
         if (!email || !message) {
             throw "Email and message are required fields.";
         }
-
-        return await messageDao.create({ email, message });
+        const created = await messageDao.create({ email, message });
+        return created[0];
     }
 };
