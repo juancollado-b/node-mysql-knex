@@ -18,8 +18,9 @@ app.set("view engine", "hbs");
 app.set("views", "./src/views");
 
 app.use(express.static("public"));
-app.use(require("./routes/chat.router")(io));
+app.use(require("./routes/chat.router"));
+require("./routes/socketConnections")(io);
 
-app.listen(PORT, () => {
+http.listen(PORT, () => {
     console.log("App listen on port", PORT);
 });
